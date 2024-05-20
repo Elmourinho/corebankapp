@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=core_banking_db'
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=admin'
+    ports:
+      - '5433:5432'
+  rabbitmq:
+    image: 'rabbitmq:management'
+    restart: no
+    ports:
+      - "5672:5672"
+      - "15672:15672"
