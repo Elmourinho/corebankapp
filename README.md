@@ -22,6 +22,7 @@ I began by focusing on the tools, which were provided in the task description. A
 
 ## Improvements:
 - Currently, balances are added sequentially. Since it required additional configuration with MyBatis, and from business perspective, I assume that, opening accounts with multiple balances simultaneously is uncommon, therefore, I opted to keep it simple
+- Some validations (Currency, Transaction Direction) are missing. Since they are provided as enums in my structure, incorrect values will result in a bad request.
 - Additional edge case tests could be added to improve robustness
 
 ## Performance testing:
